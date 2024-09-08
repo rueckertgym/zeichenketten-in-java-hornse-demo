@@ -6,8 +6,6 @@ public class Zeichenkettenoperationen {
 
     public static void main(String[] args) {
         new Zeichenkettenoperationen();
-        System.out.println("Herzlich willkommen zuZeichenketten Tester!");
-
     }
 
     public Zeichenkettenoperationen() {
@@ -21,13 +19,15 @@ public class Zeichenkettenoperationen {
             int option = scanner.nextInt();
             scanner.nextLine(); // nextInt scannt keine neue Zeile. Ohne diese Anweisung würde das nächste gewollte nextLine nicht funktionieren.
             if (option == 1) {
+                this.test.setEingabe("");
                 System.out.println("Gib die Zeichenkette an, die umgekehrt werden soll:");
                 String zeichenkette = scanner.nextLine();
                 this.test.setEingabe(zeichenkette);
                 this.test.zeichenketteUmkehren();
 
             } else if (option == 2) {
-                // this.sendMessage();
+                this.test.setEingabe("");
+                this.test.setAusgabe("");
                 System.out.println("Gib die Zeichenkette für den Palindromtest an:");
                 String zeichenkette = scanner.nextLine();
                 this.test.setEingabe(zeichenkette);
@@ -40,7 +40,4 @@ public class Zeichenkettenoperationen {
             System.out.println();
         }
     }
-
-
-
 }
