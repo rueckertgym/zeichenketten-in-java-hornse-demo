@@ -73,7 +73,7 @@ public class Tester {
     }
 
     /**
-     * Die in eingabe gespeicherte Zeichenkette wird umgekehrt und zurückgegeben.
+     * Die in der Vairiable eingabe gespeicherte Zeichenkette wird umgekehrt und zurückgegeben.
      *
      * @return umgedrehtes : String
      */
