@@ -95,4 +95,29 @@ public class Tester {
     public boolean isIstPalindrom() {
         return istPalindrom;
     }
+
+    /**
+     * Zählt die Anzahl der einzelnen Buchstaben (a-z, case-insensitive) im übergebenen Text.
+     * Gibt ein Array der Häufigkeiten zurück und gibt das Ergebnis auf der Konsole aus.
+     *
+     * @param text Der zu analysierende Text
+     * @return int[] Array mit der Häufigkeit der Buchstaben (Index 0 = 'a', 25 = 'z')
+     */
+    public int[] buchstabenZaehlen(String text) {
+        int[] counts = new int[26];
+        text = text.toLowerCase();
+        for (int i = 0; i < text.length(); i++) {
+            char c = text.charAt(i);
+            if (c >= 'a' && c <= 'z') {
+                counts[c - 'a']++;
+            }
+        }
+        // Ausgabe auf der Konsole
+        for (int i = 0; i < counts.length; i++) {
+            if (counts[i] > 0) {
+                System.out.println((char)('a' + i) + ": " + counts[i]);
+            }
+        }
+        return counts;
+    }
 }

@@ -15,6 +15,7 @@ public class Zeichenkettenoperationen {
             System.out.println("== HAUPTMENÜ ==");
             System.out.println("[1] Zeichenkette umdrehen");
             System.out.println("[2] Palindromtest");
+            System.out.println("[3] Buchataben zählen");
             System.out.println("[0] Beenden");
             int option = scanner.nextInt();
             scanner.nextLine(); // nextInt scannt keine neue Zeile. Ohne diese Anweisung würde das nächste gewollte nextLine nicht funktionieren.
@@ -24,7 +25,6 @@ public class Zeichenkettenoperationen {
                 String zeichenkette = scanner.nextLine();
                 this.test.setEingabe(zeichenkette);
                 this.test.zeichenketteUmkehren();
-
             } else if (option == 2) {
                 this.test.setEingabe("");
                 this.test.setAusgabe("");
@@ -33,6 +33,15 @@ public class Zeichenkettenoperationen {
                 this.test.setEingabe(zeichenkette);
                 this.test.palindromTest();
                 System.out.println("Ist dein Wort ein Palindrom? Die Antwort lautet: "+this.test.isIstPalindrom());
+                }
+                else if (option == 3) {
+                this.test.setEingabe("");
+                this.test.setAusgabe("");
+                System.out.println("Gib einen Text an, in dem die Buchstaben gezählt werden sollen:");
+                String zeichenkette = scanner.nextLine();
+                this.test.setEingabe(zeichenkette);
+                this.test.buchstabenZaehlen(zeichenkette);
+                //System.out.println("Ist dein Wort ein Palindrom? Die Antwort lautet: "+this.test.isIstPalindrom());
                 }
             else if (option == 0) {
                 break;
